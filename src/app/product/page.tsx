@@ -12,7 +12,8 @@ export default function Product() {
                 <Link href='product/2'>Product 2</Link>
             </h1>
             <h1>
-                <Link href='product/3'>Product 3</Link>
+                <Link href='product/3' replace> {/* when back from this route is not back to the last one navigate from , it is replace the route history and back to the home*/}
+                Product 3</Link>
             </h1>
             <h1>
                 <Link href={`product/${productID}`}>Product {productID}</Link>
