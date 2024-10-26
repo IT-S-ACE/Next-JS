@@ -6,9 +6,17 @@ interface Tparams  {
     }
 }
 
+const getRandomInt = (count: number) => {
+    return Math.floor(Math.random() * count)
+}
+
 export default function ReviewDetail({params}: Tparams) {
     if(parseInt(params.reviewID) > 1000){
         notFound();
+    }
+    const random = getRandomInt(2)
+    if(random === 1 ) {
+        throw new Error('Error Loading Review')
     }
     return(
         <h1>

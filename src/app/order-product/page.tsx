@@ -1,7 +1,8 @@
-import { useRouter } from "next/router"
+"use client";
+import { useRouter } from "next/navigation"
 
 export default function OrderProduct() {
-    const router = useRouter()
+    const router = useRouter();
     const handleClick = () => {
         console.log("Placing your order")
         router.push('/') // redirect to the home page by add it to the routes history
